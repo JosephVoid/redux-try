@@ -6,6 +6,7 @@ import ButtonB from './component/buttonB';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux'
 
+//Displays React logo if the state is "R", Displays Vue logo if the state is "V"
 function logoDisp (cond){  
   if (cond === 'R')
     return (
@@ -23,7 +24,7 @@ function logoDisp (cond){
 
 export function App(){
   const type = useSelector((state)=>{state.type.value})    
-  console.log(type)   
+  console.log(type) //this outputs 'undefined'
     return (
       <div className="App">        
           {logoDisp(type)}      
